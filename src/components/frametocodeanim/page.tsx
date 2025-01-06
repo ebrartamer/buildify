@@ -57,7 +57,7 @@ export default function FrameToCode() {
   };
 
   return (
-    <div className="w-full bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen">
+    <div className="w-full bg-gradient-to-b rounded-2xl  from-gray-900 to-gray-800 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-24">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -65,38 +65,43 @@ export default function FrameToCode() {
             Kodunuzu İki Farklı Yöntemle Oluşturun
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            İster frame çizerek ister görsel yükleyerek, hayalinizdeki web sitesini kolayca oluşturun
+            İster frame çizerek ister görsel yükleyerek, hayalinizdeki web
+            sitesini kolayca oluşturun
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {/* Frame to Code Section */}
           <div className="group relative bg-gray-800/50 backdrop-blur-xl rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 border border-gray-700/50">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            
+
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3 text-white">
               <div className="p-2 bg-blue-500/10 rounded-xl">
                 <Pencil className="w-6 h-6 text-blue-400" />
               </div>
               Frame'den Kod Oluştur
             </h2>
-            
+
             <div className="space-y-6">
               <div className="border-2 border-dashed border-gray-700 rounded-2xl p-8 min-h-[300px] flex items-center justify-center bg-gray-900/50 group-hover:border-blue-500/30 transition-colors duration-300">
                 {/* Mevcut Frame animasyonu */}
                 <motion.div
-                  animate={isAnimating ? {
-                    scale: [1, 0.9, 0.9, 1],
-                    x: [0, 20, -20, 0],
-                    opacity: [1, 0.5, 0.5, 1],
-                  } : {}}
+                  animate={
+                    isAnimating
+                      ? {
+                          scale: [1, 0.9, 0.9, 1],
+                          x: [0, 20, -20, 0],
+                          opacity: [1, 0.5, 0.5, 1],
+                        }
+                      : {}
+                  }
                   transition={{ duration: 2, times: [0, 0.2, 0.8, 1] }}
                   className="w-32 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-medium shadow-lg shadow-blue-500/20"
                 >
                   Button
                 </motion.div>
               </div>
-              
+
               <Link
                 href="/buildfy"
                 className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-medium 
@@ -111,14 +116,14 @@ export default function FrameToCode() {
           {/* Image to Code Section */}
           <div className="group relative bg-gray-800/50 backdrop-blur-xl rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 border border-gray-700/50">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            
+
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3 text-white">
               <div className="p-2 bg-purple-500/10 rounded-xl">
                 <Upload className="w-6 h-6 text-purple-400" />
               </div>
               Görselden Kod Oluştur
             </h2>
-            
+
             <div className="space-y-6">
               <div className="border-2 border-dashed border-gray-700 rounded-2xl p-8 min-h-[300px] flex flex-col items-center justify-center bg-gray-900/50 group-hover:border-purple-500/30 transition-colors duration-300">
                 <Upload className="w-16 h-16 text-gray-600 mb-4 group-hover:text-purple-400 transition-colors duration-300" />
@@ -138,7 +143,7 @@ export default function FrameToCode() {
                   Görsel Seç
                 </label>
               </div>
-              
+
               <Link
                 href="/buildfy"
                 className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl font-medium 
