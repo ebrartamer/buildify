@@ -3,92 +3,78 @@ import { Icons } from '@/components'
 export const perks = [
   {
     icon: Icons.auth,
-    title: 'Sign Up',
-    info: 'Create your free account to get started with Buildfy.'
+    title: 'Kayıt Ol',
+    info: 'Buildfy ile başlamak için ücretsiz hesabınızı oluşturun.'
   },
   {
     icon: Icons.customize,
-    title: 'Customize',
-    info: 'Choose a template and customize it to fit your needs.'
+    title: 'Özelleştir',
+    info: 'Bir şablon seçin ve ihtiyaçlarınıza göre özelleştirin.'
   },
   {
     icon: Icons.launch,
-    title: 'Launch',
-    info: 'Publish your website and share it with the world.'
+    title: 'Yayınla',
+    info: 'Web sitenizi yayınlayın ve dünya ile paylaşın.'
   }
 ]
 
 export const features = [
   {
     icon: Icons.bolt,
-    title: 'Fast Setup',
-    info: 'Get your website up and running in minutes with our intuitive AI-powered builder.'
+    title: 'Hızlı Kurulum',
+    info: 'Sezgisel yapay zeka destekli oluşturucumuz ile web sitenizi dakikalar içinde hazırlayın.'
   },
   {
     icon: Icons.palette,
-    title: 'Customizable Templates',
-    info: 'Choose from a variety of stunning templates and customize them to suit your brand.'
+    title: 'Özelleştirilebilir Şablonlar',
+    info: 'Çeşitli etkileyici şablonlar arasından seçim yapın ve markanıza uygun şekilde özelleştirin.'
   },
-  {
-    icon: Icons.seo,
-    title: 'SEO Optimized',
-    info: 'Built-in SEO features ensure your website ranks well on search engines.'
-  },
+
   {
     icon: Icons.monitor,
-    title: 'Responsive Design',
-    info: 'Your website will look great on any device, from desktops to mobile phones.'
+    title: 'Duyarlı Tasarım',
+    info: 'Web siteniz masaüstünden mobil telefonlara kadar her cihazda harika görünecek.'
   },
-  {
-    icon: Icons.shop,
-    title: 'E-Commerce Ready',
-    info: 'Start selling online with our e-commerce features and integrations.'
-  },
-  {
-    icon: Icons.server,
-    title: 'Secure Hosting',
-    info: 'Enjoy peace of mind with secure and reliable hosting for your website.'
-  }
 ]
 
 export const pricingCards = [
   {
-    title: 'Starter',
-    description: 'Perfect for trying out plura',
-    price: 'Free',
+    title: 'Başlangıç',
+    description: 'Plura\'yı denemek için mükemmel',
+    price: 'Ücretsiz',
     duration: '',
-    highlight: 'Key features',
-    buttonText: 'Start for free',
-    features: ['Limited projects', '1 Team member', 'Basic features'],
+    highlight: 'Temel özellikler',
+    buttonText: 'Ücretsiz başla',
+    features: ['Sınırlı projeler', '1 Takım üyesi', 'Temel özellikler'],
     priceId: ''
   },
   {
-    title: 'Unlimited Saas',
-    description: 'The ultimate agency kit',
-    price: '$199',
-    duration: 'month',
-    highlight: 'Key features',
-    buttonText: 'Upgrade to Pro',
+    title: 'Sınırsız Saas',
+    description: 'En kapsamlı ajans kiti',
+    price: '₺6.999',
+    duration: 'ay',
+    highlight: 'Temel özellikler',
+    buttonText: 'Pro\'ya yükselt',
     features: [
-      'Unlimited projects',
-      '5 Team members',
-      'Advanced design tools',
-      'Customizable domain'
+      'Sınırsız projeler',
+      '5 Takım üyesi',
+      'Gelişmiş tasarım araçları',
+      'Özelleştirilebilir alan adı'
     ],
     priceId: 'price_1OYxkqFj9oKEERu1KfJGWxgN'
   },
   {
-    title: 'Enterprise',
-    description: 'For serious agency owners',
-    price: '$399',
-    duration: 'month',
-    highlight: 'Everything in Starter, plus',
-    buttonText: 'Upgrade to Enterprise',
+    title: 'Kurumsal',
+    description: 'Ciddi ajans sahipleri için',
+    price: '₺13.999',
+    duration: 'ay',
+    highlight: 'Başlangıçtaki her şey, artı',
+    buttonText: 'Kurumsala yükselt',
     features: [
-      'Unlimited projects',
-      'Unlimited Team members',
-      'Custom branding',
-      'Priority support (24/7)'
+      'Sınırsız projeler',
+      'Sınırsız Takım üyesi',
+      'Özel markalama',
+      'Öncelikli destek (7/24)'
     ],
     priceId: 'price_1OYxkqFj9oKEERu1NbKUxXxN'
   }
@@ -96,60 +82,60 @@ export const pricingCards = [
 
 export const bentoCards = [
   {
-    title: 'Start with Inspiration',
-    info: 'Browse our vast library of pre-designed templates or upload your own images.',
-    imgSrc: '/assets/bento-1.svg', // Lightbulb or Inspiration icon
-    alt: 'Inspiration for website creation'
+    title: 'İlhamla Başlayın',
+    info: 'Geniş önceden tasarlanmış şablon kütüphanemize göz atın veya kendi görsellerinizi yükleyin.',
+    imgSrc: '/assets/bento-1.svg',
+    alt: 'Website oluşturma için ilham'
   },
   {
-    title: 'AI Assists Your Vision',
-    info: 'Our intelligent AI tailors suggestions and functionalities based on your goals.',
-    imgSrc: '/assets/bento1.svg', // AI Assistant icon
-    alt: 'AI website building assistant'
+    title: 'Yapay Zeka Vizyonunuza Yardımcı Olur',
+    info: 'Akıllı yapay zekamız hedeflerinize göre öneriler ve işlevler sunar.',
+    imgSrc: '/assets/bento1.svg',
+    alt: 'Yapay zeka website oluşturma asistanı'
   },
   {
-    title: 'Drag & Drop Customization',
-    info: 'Effortlessly personalize your website with our intuitive drag-and-drop editor.',
-    imgSrc: '/assets/bento1.svg', // Drag and Drop icon or hand editing a website
-    alt: 'Website customization with drag and drop'
+    title: 'Sürükle & Bırak Özelleştirme',
+    info: 'Sezgisel sürükle-bırak düzenleyicimiz ile web sitenizi kolayca kişiselleştirin.',
+    imgSrc: '/assets/bento1.svg',
+    alt: 'Sürükle ve bırak ile website özelleştirme'
   },
   {
-    title: 'Launch & Shine Online',
-    info: 'Publish your website with a single click and take your brand to the world.',
-    imgSrc: '/assets/bento1.svg', // Rocket launching or website going live
-    alt: 'Website launch and publication'
+    title: 'Yayınlayın & İnternette Parlayın',
+    info: 'Tek tıkla web sitenizi yayınlayın ve markanızı dünyaya tanıtın.',
+    imgSrc: '/assets/bento1.svg',
+    alt: 'Website yayınlama ve tanıtım'
   }
 ]
 
 export const reviews = [
   {
-    name: 'Jack',
-    username: '@jack',
-    body: "I've never seen anything like this before. It's amazing. I love it."
+    name: 'Ahmet',
+    username: '@ahmet',
+    body: 'Daha önce böyle bir şey görmemiştim. Harika. Çok beğendim.'
   },
   {
-    name: 'Jill',
-    username: '@jill',
-    body: "I don't know what to say. I'm speechless. This is amazing."
+    name: 'Ayşe',
+    username: '@ayse',
+    body: 'Ne diyeceğimi bilemiyorum. Kelimeler kifayetsiz kalıyor. Bu muhteşem.'
   },
   {
-    name: 'John',
-    username: '@john',
-    body: "I'm at a loss for words. This is amazing. I love it."
+    name: 'Mehmet',
+    username: '@mehmet',
+    body: 'Söyleyecek söz bulamıyorum. Bu harika. Çok beğendim.'
   },
   {
-    name: 'Jane',
-    username: '@jane',
-    body: "I'm at a loss for words. This is amazing. I love it."
+    name: 'Fatma',
+    username: '@fatma',
+    body: 'Söyleyecek söz bulamıyorum. Bu harika. Çok beğendim.'
   },
   {
-    name: 'Jenny',
-    username: '@jenny',
-    body: "I'm at a loss for words. This is amazing. I love it."
+    name: 'Zeynep',
+    username: '@zeynep',
+    body: 'Söyleyecek söz bulamıyorum. Bu harika. Çok beğendim.'
   },
   {
-    name: 'James',
-    username: '@james',
-    body: "I'm at a loss for words. This is amazing. I love it."
+    name: 'Ali',
+    username: '@ali',
+    body: 'Söyleyecek söz bulamıyorum. Bu harika. Çok beğendim.'
   }
 ]

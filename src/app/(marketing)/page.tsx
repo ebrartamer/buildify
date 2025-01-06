@@ -62,7 +62,7 @@ const HomePage = () => {
               </p>
               <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
                 <Link
-                  href="/Code"
+                  href="/buildfy"
                   className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none"
                 >
                   <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0">
@@ -93,12 +93,12 @@ const HomePage = () => {
       <Wrapper className="flex flex-col items-center justify-center py-12 relative">
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
-            <SectionBadge title="The Process" />
+            <SectionBadge title="Süreç" />
             <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-              Three steps to build your dream website
+              Hayalinizdeki web sitesini oluşturmak için üç adım
             </h2>
             <p className="text-muted-foreground mt-6">
-              Turn your vision into reality in just 3 simple steps
+              Vizyonunuzu sadece 3 basit adımda gerçeğe dönüştürün
             </p>
           </div>
         </Container>
@@ -130,13 +130,12 @@ const HomePage = () => {
         <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
-            <SectionBadge title="Features" />
+            <SectionBadge title="Özellikler" />
             <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-              Discover our powerful features
+              Güçlü özelliklerimizi keşfedin
             </h2>
             <p className="text-muted-foreground mt-6">
-              Buildfy offers a range of features to help you build a stunning
-              website in no time
+              Buildfy, kısa sürede etkileyici bir web sitesi oluşturmanıza yardımcı olacak özellikler sunar
             </p>
           </div>
         </Container>
@@ -172,13 +171,13 @@ const HomePage = () => {
         <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
-            <SectionBadge title="Pricing" />
+            <SectionBadge title="Fiyatlandırma" />
             <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-              Unlock the right plan for your business
+              İşletmeniz için doğru planı seçin
             </h2>
             <p className="text-muted-foreground mt-6">
-              Choose the best plan for your business and start building your
-              dream website today
+              İşletmeniz için en iyi planı seçin ve hayalinizdeki web sitesini
+              oluşturmaya başlayın
             </p>
           </div>
         </Container>

@@ -20,7 +20,7 @@ const Navbar = async () => {
           <nav className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <ul className="flex items-center justify-center gap-8">
               <Link href="/Code" className="hover:text-foreground/80 text-sm">
-                Code{" "}
+                Kod{" "}
               </Link>
               <Link
                 href="/buildfy"
@@ -29,10 +29,10 @@ const Navbar = async () => {
                 Frame
               </Link>
               <Link href="/About" className="hover:text-foreground/80 text-sm">
-                About
+                Hakkında
               </Link>
               {/* <Link href="#" className="hover:text-foreground/80 text-sm">
-                Features
+                Özellikler
               </Link> */}
               {/* <Link href="#" className="hover:text-foreground/80 text-sm">
                 Blog
@@ -48,7 +48,7 @@ const Navbar = async () => {
                   href="/sign-in"
                   className={buttonVariants({ size: "sm", variant: "ghost" })}
                 >
-                  Login
+                  Giriş Yap
                 </Link>
                 <Link
                   href="/sign-up"
@@ -57,7 +57,7 @@ const Navbar = async () => {
                     className: "hidden md:flex",
                   })}
                 >
-                  Start free trial
+                  Ücretsiz Dene
                 </Link>
               </>
             )}

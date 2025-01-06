@@ -2,10 +2,13 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Code2, Pencil, ArrowRight } from "lucide-react";
+import { Code2, Pencil, ArrowRight, Upload } from "lucide-react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function FrameToCode() {
   const [isAnimating, setIsAnimating] = useState(false);
+  const router = useRouter();
 
   // IDE-like syntax highlighting için renkler
   const colors = {
@@ -54,129 +57,98 @@ export default function FrameToCode() {
   };
 
   return (
-    <div className="w-full p-8 flex items-center justify-center">
-      <div className="w-full max-w-6xl">
-        <div className="flex gap-8 items-stretch">
-          {/* Sol taraf - Frame */}
-          <motion.div className="flex-1 bg-white rounded-lg shadow-lg p-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <Pencil className="w-5 h-5 text-blue-500" />
-                <h2 className="text-xl font-semibold">Frame Tasarımı</h2>
+    <div className="w-full bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 py-24">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mb-4">
+            Kodunuzu İki Farklı Yöntemle Oluşturun
+          </h1>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            İster frame çizerek ister görsel yükleyerek, hayalinizdeki web sitesini kolayca oluşturun
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Frame to Code Section */}
+          <div className="group relative bg-gray-800/50 backdrop-blur-xl rounded-3xl p-8 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 border border-gray-700/50">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3 text-white">
+              <div className="p-2 bg-blue-500/10 rounded-xl">
+                <Pencil className="w-6 h-6 text-blue-400" />
               </div>
-
-              <div className="border-2 border-dashed border-gray-300 p-4 rounded-md min-h-[200px] flex items-center justify-center">
+              Frame'den Kod Oluştur
+            </h2>
+            
+            <div className="space-y-6">
+              <div className="border-2 border-dashed border-gray-700 rounded-2xl p-8 min-h-[300px] flex items-center justify-center bg-gray-900/50 group-hover:border-blue-500/30 transition-colors duration-300">
+                {/* Mevcut Frame animasyonu */}
                 <motion.div
-                  animate={
-                    isAnimating
-                      ? {
-                          scale: [1, 0.9, 0.9, 1],
-                          x: [0, 20, -20, 0],
-                          opacity: [1, 0.5, 0.5, 1],
-                        }
-                      : {}
-                  }
+                  animate={isAnimating ? {
+                    scale: [1, 0.9, 0.9, 1],
+                    x: [0, 20, -20, 0],
+                    opacity: [1, 0.5, 0.5, 1],
+                  } : {}}
                   transition={{ duration: 2, times: [0, 0.2, 0.8, 1] }}
-                  className="w-32 h-12 bg-blue-500 rounded flex items-center justify-center text-white font-medium"
+                  className="w-32 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-medium shadow-lg shadow-blue-500/20"
                 >
-                  Click me
+                  Button
                 </motion.div>
               </div>
+              
+              <Link
+                href="/buildfy"
+                className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl font-medium 
+                  hover:from-blue-600 hover:to-blue-700 transition-all transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30"
+              >
+                Frame'i Koda Dönüştür
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
-          </motion.div>
-
-          {/* Orta - Ok İşareti */}
-          <div className="flex items-center">
-            <motion.div
-              animate={
-                isAnimating
-                  ? {
-                      x: [0, 10, -10, 0],
-                      scale: [1, 1.2, 1.2, 1],
-                      color: ["#1d4ed8", "#2563eb", "#2563eb", "#1d4ed8"],
-                    }
-                  : {}
-              }
-              transition={{ duration: 2, times: [0, 0.2, 0.8, 1] }}
-            >
-              <ArrowRight className="w-8 h-8 text-blue-700" />
-            </motion.div>
           </div>
 
-          {/* Sağ taraf - Kod */}
-          <motion.div className="flex-1 bg-gray-900 rounded-lg shadow-lg p-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <Code2 className="w-5 h-5 text-blue-400" />
-                <h2 className="text-xl font-semibold text-white">Kod</h2>
+          {/* Image to Code Section */}
+          <div className="group relative bg-gray-800/50 backdrop-blur-xl rounded-3xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300 border border-gray-700/50">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3 text-white">
+              <div className="p-2 bg-purple-500/10 rounded-xl">
+                <Upload className="w-6 h-6 text-purple-400" />
               </div>
-
-              <div className="relative">
-                <pre className="text-sm font-mono bg-gray-800 p-4 rounded-md overflow-x-auto min-h-[200px]">
-                  <code>
-                    {codeLines.map((line, lineIndex) => (
-                      <motion.div
-                        key={lineIndex}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={isAnimating ? { opacity: 1, y: 0 } : {}}
-                        transition={{
-                          duration: 0.3,
-                          delay: lineIndex * 0.2,
-                        }}
-                        className="whitespace-pre"
-                      >
-                        {line.map((segment, segmentIndex) => (
-                          <motion.span
-                            key={segmentIndex}
-                            initial={{ opacity: 0 }}
-                            animate={isAnimating ? { opacity: 1 } : {}}
-                            transition={{
-                              duration: 0.1,
-                              delay: lineIndex * 0.2 + segmentIndex * 0.05,
-                            }}
-                            className={segment.color}
-                          >
-                            {segment.text}
-                          </motion.span>
-                        ))}
-                      </motion.div>
-                    ))}
-                  </code>
-                </pre>
-
-                {/* Yanıp sönen kursor efekti */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={
-                    isAnimating
-                      ? {
-                          opacity: [0, 1, 0],
-                          transition: {
-                            duration: 0.8,
-                            repeat: 3,
-                            repeatType: "reverse",
-                          },
-                        }
-                      : { opacity: 0 }
-                  }
-                  className="absolute bottom-4 left-4 w-2 h-4 bg-white"
+              Görselden Kod Oluştur
+            </h2>
+            
+            <div className="space-y-6">
+              <div className="border-2 border-dashed border-gray-700 rounded-2xl p-8 min-h-[300px] flex flex-col items-center justify-center bg-gray-900/50 group-hover:border-purple-500/30 transition-colors duration-300">
+                <Upload className="w-16 h-16 text-gray-600 mb-4 group-hover:text-purple-400 transition-colors duration-300" />
+                <p className="text-gray-400 text-center mb-4">
+                  Görselinizi sürükleyip bırakın veya seçin
+                </p>
+                <input
+                  type="file"
+                  className="hidden"
+                  accept="image/*"
+                  id="imageUpload"
                 />
+                <label
+                  htmlFor="imageUpload"
+                  className="px-6 py-3 bg-purple-500/10 text-purple-400 rounded-xl cursor-pointer hover:bg-purple-500/20 transition-colors duration-300"
+                >
+                  Görsel Seç
+                </label>
               </div>
+              
+              <Link
+                href="/buildfy"
+                className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl font-medium 
+                  hover:from-purple-600 hover:to-purple-700 transition-all transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-purple-500/30"
+              >
+                Görseli Koda Dönüştür
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
-          </motion.div>
-        </div>
-
-        {/* Dönüştürme butonu */}
-        <div className="mt-8 flex justify-center">
-          <button
-            onClick={handleTransform}
-            disabled={isAnimating}
-            className="px-6 py-3 bg-blue-500 text-white rounded-full font-medium 
-              hover:bg-blue-600 transition-colors disabled:opacity-50 
-              disabled:cursor-not-allowed"
-          >
-            Koda Dönüştür
-          </button>
+          </div>
         </div>
       </div>
     </div>
