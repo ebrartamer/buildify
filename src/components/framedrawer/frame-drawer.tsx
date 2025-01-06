@@ -475,12 +475,12 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
   };
 
   return (
-    <div className="flex space-x-4 p-4 bg-gray-100 min-h-screen">
+    <div className="flex space-x-4 p-4  rounded-md ">
       <div className="flex flex-col space-y-4">
         <Button
           onClick={() => setIsDrawMode(!isDrawMode)}
           variant={isDrawMode ? "secondary" : "outline"}
-          className="w-12 h-12 p-2"
+          className="w-12 h-12 bg-gray-800 p-2"
         >
           {isDrawMode ? (
             <MousePointer className="w-6 h-6" />
@@ -491,7 +491,7 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
         <Button
           onClick={handleClear}
           variant="outline"
-          className="w-12 h-12 p-2"
+          className="w-12 bg-gray-800 h-12 p-2"
         >
           <Trash2 className="w-6 h-6" />
         </Button>
@@ -499,7 +499,7 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
           onClick={handleDeleteSelected}
           disabled={!selectedFrame}
           variant="outline"
-          className="w-12 h-12 p-2"
+          className="w-12 bg-gray-800 h-12 p-2"
         >
           <Trash2 className="w-6 h-6" />
         </Button>
@@ -507,7 +507,7 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
           onClick={handleChangeColor}
           disabled={!selectedFrame}
           variant="outline"
-          className="w-12 h-12 p-2"
+          className="w-12 bg-gray-800 h-12 p-2"
         >
           <PaintBucket className="w-6 h-6" />
         </Button>
@@ -515,7 +515,7 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
           onClick={handleBringToFront}
           disabled={!selectedFrame}
           variant="outline"
-          className="w-12 h-12 p-2"
+          className="w-12 bg-gray-800 h-12 p-2"
         >
           <ZoomIn className="w-6 h-6" />
         </Button>
@@ -523,7 +523,7 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
           onClick={undo}
           disabled={historyIndex < 0}
           variant="outline"
-          className="w-12 h-12 p-2"
+          className="w-12 bg-gray-800 h-12 p-2"
         >
           <Undo className="w-6 h-6" />
         </Button>
@@ -531,14 +531,14 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
           onClick={redo}
           disabled={historyIndex >= history.length - 1}
           variant="outline"
-          className="w-12 h-12 p-2"
+          className="w-12 bg-gray-800 h-12 p-2"
         >
           <Redo className="w-6 h-6" />
         </Button>
         <Button
           onClick={handleDownload}
           variant="outline"
-          className="w-12 h-12 p-2"
+          className="w-12 bg-gray-800 h-12 p-2"
         >
           <Download className="w-6 h-6" />
         </Button>
@@ -556,7 +556,7 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
         />
       </div>
       <div className="w-64 space-y-4">
-        <div className="bg-white p-4 rounded-lg shadow">
+        <div className="p-4 bg-gray-800 rounded-lg shadow">
           <h2 className="text-lg font-semibold mb-2">Settings</h2>
           <div className="flex items-center space-x-2">
             <Label htmlFor="grid-size">Grid Size:</Label>
@@ -565,7 +565,14 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
               type="number"
               value={gridSize}
               onChange={(e) => setGridSize(Number(e.target.value))}
-              className="w-20"
+              className="w-20
+              px-2
+              py-1
+              text-sm
+              border
+              rounded-md
+              background-gray-100
+              "
               min={1}
               max={100}
             />
@@ -577,7 +584,7 @@ export default function ModernFluidFrameDrawerWithNewFeatures() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="bg-white p-4 rounded-lg shadow"
+              className="bg-gray-800 p-4 rounded-lg shadow"
             >
               <h2 className="text-lg font-semibold mb-2">Selected Frame</h2>
               <p>

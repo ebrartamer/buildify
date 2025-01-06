@@ -135,7 +135,8 @@ const HomePage = () => {
               Güçlü özelliklerimizi keşfedin
             </h2>
             <p className="text-muted-foreground mt-6">
-              Buildfy, kısa sürede etkileyici bir web sitesi oluşturmanıza yardımcı olacak özellikler sunar
+              Buildfy, kısa sürede etkileyici bir web sitesi oluşturmanıza
+              yardımcı olacak özellikler sunar
             </p>
           </div>
         </Container>

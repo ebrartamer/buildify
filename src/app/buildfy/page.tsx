@@ -183,8 +183,8 @@ export default function UploadComponent() {
             types={["png", "jpg", "jpeg"]}
             multiple={false}
           >
-            <div className="mt-2 flex justify-center rounded-lg border-2 border-dashed border-blue-200 px-4 sm:px-6 py-8 sm:py-10 cursor-pointer bg-white/80 backdrop-blur-sm transition-colors hover:bg-blue-50/80 shadow-sm">
-              <div className="text-center">
+            <div className="mt-2  flex justify-center rounded-lg border-2 border-dashed border-blue-200 px-4 sm:px-6 py-8 sm:py-10 cursor-pointer bg-black backdrop-blur-sm transition-colors hover:bg-blue-50/80 shadow-sm">
+              <div className="text-center ">
                 <PhotoIcon
                   className="mx-auto h-10 w-10 sm:h-12 sm:w-12 text-blue-400"
                   aria-hidden="true"
@@ -216,7 +216,7 @@ export default function UploadComponent() {
           </div>
         )}
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 text-gray-800">
+        <div className="flex flex-col text-white sm:flex-row items-start sm:items-center gap-2 text-gray-800">
           <label className="whitespace-nowrap font-medium">AI Model:</label>
           <Select
             value={model}
@@ -302,7 +302,7 @@ export default function UploadComponent() {
         status === "uploading" ||
         status === "uploaded" ? (
           <div className="flex flex-col justify-center items-center text-center h-full py-8">
-            <div className="max-w-xl px-4">
+            <div className="max-w-xl  px-4">
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <img
                   src="/before.png"
@@ -315,10 +315,10 @@ export default function UploadComponent() {
                   className="w-full sm:w-48 h-auto sm:h-48 object-contain rounded-lg border border-gray-200 shadow-md"
                 />
               </div>
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-800 mb-4">
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
                 Transform Your Design Vision into Reality
               </h1>
-              <p className="text-base sm:text-lg text-gray-600">
+              <p className="text-base sm:text-lg text-gray-400">
                 Simply upload your design mockup and watch as we transform it
                 into a fully functional React application with Tailwind styling.
               </p>
